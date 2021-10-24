@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    },
+    "Preprod Args": {
+      "commandName": "Project",
+      "commandLineArgs": " --s be155179-5691-45d1-a5d2-3d7dde0862b1 --r platform-prep"
+    }
+  }
+}
