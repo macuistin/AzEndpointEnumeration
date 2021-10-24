@@ -33,12 +33,12 @@ namespace AzEndpointEnumeration
         {
             var azureCredentials = GetAzAuthentication();
 
-            var frontDoors = await GetPreProdFrontDoorsAsync(options, azureCredentials);
+            var frontDoors = await GetFrontDoorsAsync(options, azureCredentials);
 
             Console.WriteLine(frontDoors.ToJson(options));
         }
 
-        private static async Task<IPage<FrontDoorModel>> GetPreProdFrontDoorsAsync(CliOptions options, AzureCredentials azureCredentials)
+        private static async Task<IPage<FrontDoorModel>> GetFrontDoorsAsync(CliOptions options, AzureCredentials azureCredentials)
         {
             var client = new FrontDoorManagementClient(azureCredentials)
             {
